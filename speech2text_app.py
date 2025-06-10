@@ -15,6 +15,7 @@ from ibm_watson_machine_learning.metanames import GenTextParamsMetaNames as GenP
 
 my_credentials = {
     "url"    : "https://us-south.ml.cloud.ibm.com"
+                # HAVE TO INITIALIZE API KEY HERE ALSO
 }
 params = {
         GenParams.MAX_NEW_TOKENS: 800, # The maximum number of tokens that the model can generate in a single run.
@@ -70,4 +71,4 @@ iface = gr.Interface(fn= transcript_audio,
                     title= "Audio Transcription App",
                     description= "Upload the audio file")
 
-iface.launch(server_name="0.0.0.0", server_port=7860)
+iface.launch(server_name="127.0.0.1", server_port=7860)
